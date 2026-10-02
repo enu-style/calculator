@@ -1,131 +1,72 @@
 # React Calculator
 
-A simple, clean, and functional calculator application built with React.js.
+A simple calculator built with React. Does basic math and looks pretty good doing it.
 
-## 🎯 Features
+## What it does
 
-- ✅ Basic arithmetic operations (Addition, Subtraction, Multiplication, Division)
-- ✅ Decimal number support
-- ✅ Clear/Reset functionality (AC)
-- ✅ Delete/Backspace (DEL)
-- ✅ Positive/negative toggle (+/-)
-- ✅ Chain calculations
-- ✅ Division by zero error handling
-- ✅ Clean, modern UI with dark theme
-- ✅ Fully responsive design
-- ✅ Smooth hover and active button states
+- Add, subtract, multiply, and divide
+- Works with decimals
+- AC button clears everything
+- DEL removes the last number you typed
+- +/- switches between positive and negative
+- You can chain calculations together
+- Won't let you divide by zero (sorry)
+- Dark theme that's easy on the eyes
+- Works on mobile and desktop
 
-## 🛠️ Technologies Used
+## Tech Stack
 
-- **React** 18.2.0 - UI library
-- **Vite** 4.3.9 - Build tool and dev server
-- **CSS3** - Styling (no UI frameworks)
+Built with React and Vite. Just plain CSS for styling, no fancy frameworks needed.
 
-## 📁 Project Structure
+## Getting Started
 
-```
-calculator/
-├── public/
-│   └── index.html
-├── src/
-│   ├── components/
-│   │   ├── Calculator.jsx    # Main calculator logic and state
-│   │   ├── Display.jsx        # Display component
-│   │   └── Button.jsx         # Reusable button component
-│   ├── App.jsx                # Main app component
-│   ├── main.jsx               # React DOM entry point
-│   ├── App.css                # App styles
-│   └── index.css              # Global styles
-├── package.json
-├── vite.config.js
-└── README.md
-```
-
-## 🚀 Installation
-
-1. **Clone or download this repository**
-
-2. **Install dependencies:**
+First, install everything:
 
 ```bash
 npm install
 ```
 
-## ▶️ Running the Project
-
-Start the development server:
+Then run it:
 
 ```bash
 npm run dev
 ```
 
-The application will open at `http://localhost:5173`
+Open your browser to `http://localhost:5173` and you're good to go.
 
-## 🏗️ Build for Production
+## Building for Production
 
-Create an optimized production build:
+Want to deploy it? Build it first:
 
 ```bash
 npm run build
 ```
 
-Preview the production build:
+## How to Use
 
-```bash
-npm run preview
+Pretty straightforward - click the numbers and operators like you would on any calculator. Hit equals when you want the answer. AC clears everything, DEL removes the last digit.
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── Calculator.jsx    # Main logic lives here
+│   ├── Display.jsx        # Shows your numbers
+│   └── Button.jsx         # Reusable button
+├── App.jsx
+├── main.jsx
+└── styles...
 ```
 
-## 🎮 How to Use
+The Calculator component handles all the math and state. Display just shows what you're typing. Button is a simple component used for all the calculator buttons.
 
-1. Click number buttons (0-9) to enter numbers
-2. Click operator buttons (+, -, ×, ÷) to select an operation
-3. Click **=** to calculate the result
-4. Click **AC** to clear everything
-5. Click **DEL** to delete the last digit
-6. Click **+/-** to toggle between positive and negative
-7. Click **.** to add a decimal point
+## Design Notes
 
-## 🧩 Component Details
+Went with a dark theme because calculators always look better that way. Orange for operators, green for equals, gray for everything else. Buttons have a little bounce when you click them.
 
-### Calculator.jsx
-Manages all calculator state and logic including:
-- Number input handling
-- Operator selection
-- Calculation execution
-- Clear, delete, and toggle operations
+It's responsive too - scales down nicely on phones.
 
-### Display.jsx
-Presents the current value and operation in a clean format.
+## License
 
-### Button.jsx
-Reusable button component that accepts:
-- `value` - Button label
-- `onClick` - Click handler
-- `className` - Additional CSS classes
-- `type` - Button type (number, operator, function, equals)
-
-## 📱 Responsive Design
-
-The calculator adapts to different screen sizes:
-- Desktop: Full size with optimal spacing
-- Tablet: Adjusted padding and font sizes
-- Mobile: Compact layout optimized for touch
-
-## 🎨 UI Design
-
-- **Dark theme** for comfortable viewing
-- **Color-coded buttons:**
-  - Gray: Numbers
-  - Light gray: Functions (AC, DEL, +/-)
-  - Orange: Operators (+, -, ×, ÷)
-  - Green: Equals (=)
-- **Smooth animations** on hover and click
-- **Clear visual hierarchy** with proper spacing
-
-## 📝 License
-
-This project is open source and available for educational purposes.
-
-## 👨‍💻 Author
-
-Created as a demonstration of React fundamentals and modern web development practices.
+Free to use however you want.
