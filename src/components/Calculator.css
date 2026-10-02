@@ -1,0 +1,138 @@
+.calculator {
+  background: #1e1e1e;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.display {
+  background: #2d2d2d;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.operation {
+  color: #888;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  min-height: 1.2rem;
+}
+
+.current-value {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 300;
+  min-height: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.calc-button {
+  background: #3a3a3a;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 400;
+}
+
+.calc-button:hover {
+  background: #4a4a4a;
+  transform: translateY(-2px);
+}
+
+.calc-button:active {
+  transform: translateY(0);
+}
+
+.calc-button.function {
+  background: #5a5a5a;
+  color: #fff;
+}
+
+.calc-button.function:hover {
+  background: #6a6a6a;
+}
+
+.calc-button.operator {
+  background: #ff9500;
+  color: #fff;
+}
+
+.calc-button.operator:hover {
+  background: #ffaa33;
+}
+
+.calc-button.equals {
+  background: #34c759;
+  color: #fff;
+}
+
+.calc-button.equals:hover {
+  background: #4cd964;
+}
+
+.calc-button.zero {
+  grid-column: span 2;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 480px) {
+  .calculator {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .display {
+    padding: 15px;
+    min-height: 70px;
+  }
+
+  .current-value {
+    font-size: 2rem;
+  }
+
+  .operation {
+    font-size: 0.9rem;
+  }
+
+  .calc-button {
+    font-size: 1.3rem;
+    padding: 15px;
+  }
+
+  .button-grid {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 360px) {
+  .current-value {
+    font-size: 1.8rem;
+  }
+
+  .calc-button {
+    font-size: 1.2rem;
+    padding: 12px;
+  }
+}
